@@ -1,21 +1,28 @@
-# Project-Ironclad-SOHO-Lab
- CompTIA A+ Core 1 &amp; 2 Hands-On Infrastructure and Security Lab.
-# Project 1: Enterprise SOHO Perimeter Firewall Deployment
-**Asset Tag:** AN-IRONCLAD-GW01  
-**Platform:** pfSense 2.7.0 OS on Type-2 Hypervisor (VirtualBox)
+# Project Ironclad: SOHO Firewall & Perimeter Infrastructure
 
-## Project Objective
-To architect and configure an isolated perimeter gateway security topology for a small office/home office (SOHO) network environment, establishing clear segregation between a public WAN and a secure local zone (LAN).
+## 📁 Project Overview
+In my own words: I created a WAN (Wide Area Network) and a LAN (Local Area Network) topology using an enterprise-sized firewall deployment. This firewall sits directly at the network perimeter boundary to protect our entire architecture. While the underlying text interface can seem complex, it acts as our fully automated secure base to shield our assets before expanding the office layout.
 
-## CompTIA A+ Core 1 & 2 Objectives Demonstrated
-* **Domain 4.1 (Virtualization):** Provisioned a Type-2 hypervisor engine, configuring distinct memory allocation (1024MB RAM) and dynamic VDI storage constraints (16GB).
-* **Domain 2.2 (SOHO Networks):** Configured dual-homed networking architecture mapping out public-facing WAN (Bridged to host controller) and private-facing LAN (Isolated internal segment).
-* **Domain 1.2 (OS Installations):** Executed a full bare-metal Text User Interface (TUI) operating system installation, utilizing manual disk selection and target system file extractions.
+---
 
-## Real-World Troubleshooting Milestones Resolved
-1. **FreeBSD Kernel Boot Error (Error 19):** Mitigated a storage controller mounting failure by updating the legacy virtual motherboard chipset configurations from PIIX3 to ICH9.
-2. **Virtual Media Boot Loops:** Diagnosed and bypassed an infinite installer loop by executing a hard power cycle and manually unmounting the underlying bootable ISO image file using hypervisor device overrides.
+## 📸 Phase 1: Virtual Hardware Provisioning
+* **CompTIA A+ Core 1 Target (Domain 4.1):** Configured a Type-2 hypervisor engine allocating 1GB base memory.
+![Hardware Shell Blueprint](01_gateway_hardware_shell.png.png)
 
-## Current Network Status Verified
-* **WAN Interface:** Active via DHCP (IPv4 & IPv6 resolution)
-* **LAN Gateway IP:** Static 192.168.1.1/24 (Private Security Perimeter Active)
+---
+
+## 📸 Phase 2: Dual-Homed Network Configuration
+* **CompTIA A+ Core 1 Target (Domain 2.2):** Established public WAN bridging alongside a private virtual network segment named `AN-SECURE-LAN`.
+![Network Routing Interfaces](02_Network_cable_configured.png)
+
+---
+
+## 📸 Phase 3: Operating System Disk Installation
+* **CompTIA A+ Core 2 Target (Domain 1.2):** Mounted the raw pfSense `.iso` installer, formatting virtual volume storage layout sectors.
+![System Extraction Progress](03_firewall_extraction_progress.png.png)
+
+---
+
+## 📸 Phase 4: Final Live Production Verification
+* **CompTIA A+ Core 1 Target (Domain 4.2):** Live verification of DHCP client leases and static network gateway parameters.
+![Perimeter Firewall Active Console](04-firewall-live-console.png)
